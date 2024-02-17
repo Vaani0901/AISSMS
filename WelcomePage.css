@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .center-section {
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .button-group {
+    display: flex; 
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .center-section h1{
+    font-size: 2.1em;
+    margin-bottom: 20px;
+  }
+  .center-section p{
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+
+  button {
+    background: green; /* Change the button color to green */
+    color: white;
+    border: 0;
+    padding: 6px 12px;
+    border-radius: 2px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+    
+    button:hover {
+    background: darkgreen; /* Change the button color to dark green on hover */
+    }
+  
+    .button-container {
+    padding: 12px 24px;
+  }
+  
+  .button-container:not(:last-child) {
+    border-right: 1px solid black;
+  }
+
+  .Loginsignupopt {
+    text-align: center; 
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #333; 
+}
+.logo {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+}
