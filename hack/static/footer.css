@@ -1,0 +1,32 @@
+
+.footer {
+    background-color: #50c890;
+    height: 50px;
+    display: flex;
+    /*I want the container to be end to end at the bottom of the page*/
+    position: absolute;
+    bottom: -684px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fb {
+    height: 65px;
+    width: 65px;
+    transform: translateY(-5px);
+}
+#ig, #twit {
+    height: 55px;
+    width: 55px;
+}
+
+img{
+    padding: 15px;
+}

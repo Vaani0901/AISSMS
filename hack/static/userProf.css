@@ -1,0 +1,110 @@
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* Add margin to the left to separate it from the form */
+}
+
+.container {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    /* Change flex-direction to column */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 130px);
+    height: 500px;
+}
+
+#profileForm {
+    display: grid;
+    gap: 10px;
+    padding: 40px;
+    height: 700px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* Add margin to the top to separate it from the title */
+}
+
+#profileForm label {
+    font-weight: bold;
+}
+
+#profileForm input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.stat {
+    text-align: center;
+}
+
+header h1 {
+    font: 700 2.8rem sans-serif;
+}
+
+.counter-wrapper:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    filter: saturate(300%);
+    box-shadow: 0 .2rem .2rem #0006;
+}
+
+.counters {
+    width: 80vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter-wrapper {
+    width: 32%;
+    height: 9rem;
+
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+    box-shadow: 0 .2rem .2rem #0006;
+
+}
+
+.counter-wrapper:nth-child(1) {
+    background: linear-gradient(45deg, pink, crimson);
+}
+
+.counter-wrapper:nth-child(2) {
+    background: linear-gradient(45deg, cyan, rgb(15, 174, 58));
+}
+
+.counter-wrapper:nth-child(3) {
+    background: linear-gradient(45deg, mediumspringgreen, green);
+}
+
+.counter-icon {
+    font-size: 2.5rem;
+}
+
+.counter-info {
+    color: #fff;
+    text-shadow: 1px 1px 1px #0007;
+}
+
+.counter-info h1.counter {
+    font: normal 2.8rem sans-serif;
+}
+
+.counter-info p {
+    font: normal 1.1rem sans-serif;
+    margin-top: .4rem;
+}

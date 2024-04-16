@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SENTIX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Sometype+Mono&display=swap');
+
+    .main {
+        background-image: linear-gradient(0deg, rgba(131, 196, 120, 0.5), rgba(98, 210, 76, 0.5));
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .container {
+
+        position: relative;
+        top: 150px;
+        border: 2px solid green;
+        border-radius: 8px;
+        height: 500px;
+        width: 350px;
+        font-family: 'Lato', sans-serif;
+        background-color: whitesmoke;
+
+    }
+
+    .lo {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .input-container {
+        position: relative;
+        font-family: 'Sometype Mono', monospace;
+        margin: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    label {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        transition: 0.2s;
+        pointer-events: none;
+    }
+
+    input:focus+label,
+    input:valid+label {
+        top: -12px;
+        font-size: 12px;
+        background: white;
+        padding: 0 5px;
+    }
+
+    .sub {
+        width: 225px;
+    }
+
+    .fot {
+        font-size: 12px;
+    }
+
+    .fot a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="lo">
+                <h3 class="text-center">WasteConnect</h3>
+                <h6 class="text-center heading2"></h6>
+                <h6 class="text-center"></h6>
+
+                <form method="post" action="/">
+                    <div class="input-container">
+                        <input type="text" name="user-email" id="inputField" required>
+                        <label for="inputField">Email address</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="user-pw" id="inputField" required>
+                        <label for="inputField">Password</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-primary sub mx-4"><a href="/index">Sign In</a></button>
+                    </div>
+                </form>
+                <footer class="text-center fot my-3"><a href="/register">Register</a></footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</body>
+
+</html>

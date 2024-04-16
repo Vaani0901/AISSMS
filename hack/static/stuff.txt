@@ -1,0 +1,17 @@
+    function submitItems() {
+        // Send the selectedItems array to a server
+        // This is just a placeholder. You'll need to replace this with your actual server-side code.
+        console.log('Submitting items:', selectedItems);
+        document.querySelector('form').submit();
+    }
+
+
+
+<!-- Company 3 -->
+<div class="company-container">
+    <img src="company3_logo.png" alt="Company 3 Logo" class="company-logo">
+    <div>
+        <div class="company-name"><a href="https://www.linkedin.com/company/company3" target="_blank">ReForge Metals Co.</a></div>
+        <div class="company-description">ReForge Metals Co. is committed to reshaping the future of metal consumption. By salvaging and repurposing metal scrap, we create high-quality, handcrafted goods that tell a story of sustainability and craftsmanship. Explore our collection and be part of the movement towards a more eco-conscious and stylish world.</div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+/* styles.css */
+
+.company-container {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px; /* Increased padding for a more spacious look */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lift effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.company-container:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Hover effect for a subtle elevation */
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 60px; /* Increased margin for a professional spacing */
+}
+
+.company-name {
+    font-size: 1.4em; /* Larger font size for a bold and stylish appearance */
+    margin-bottom: 5px;
+    font-weight: bold; /* Make company name bold for emphasis */
+    color: #2c3e50; /* Darker color for company name for better readability */
+}
+
+.company-description {
+    font-size: 1.0em;
+    color: #666;
+    line-height: 1.6; /* Improved readability with increased line height */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font for better compatibility */
+}

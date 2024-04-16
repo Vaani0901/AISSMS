@@ -1,0 +1,123 @@
+{% extends "layout.html" %} {% block body %}
+<link rel="stylesheet" href="/static/footer.css">
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: black;
+    }
+
+    tr:hover {
+        background-color: black;
+    }
+</style>
+    
+<div class="upload-text">Upload Your Trash!</div>
+<br>
+<form action="/index" method="POST"> 
+    <div class="container p-5"  style=" border: 2px solid green; border-radius: 10px;">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Trash Type</label>
+            <input class="form-control" name="trash_type" type="text" placeholder="example: Plastic, bottles, etc." aria-label="readonly input example">
+          </div>
+          <br>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Trash Quantity</label>
+            <input class="form-control" name="trash_quan" type="text" placeholder="if the bags or bottles are small etc." aria-label="readonly input example">
+        </div>
+        <br>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Number of items</label>
+            <input class="form-control" name="noofit" type="number" placeholder=" number of bags or bottles etc.">
+        </div>
+        <br>
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+
+
+<div class="items-display">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col"><span>Sno</span></th>
+                    <th scope="col"><span>Trash Type</span></th>
+                    <th scope="col"><span>Quantity</span></th>
+                    <th scope="col"><span>Number Of Items</span></th>
+                    <th scope="col"><span>User Id</span></th>
+                    <th scope="col"><span>Date</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trash in trash %}
+                <tr>
+                        <td>{{ trash.trashid }}</td>
+                        <td>{{ trash.trash_type }}</td>
+                        <td>{{ trash.trash_quantity }}</td>
+                        <td>{{ trash.no_of_items }}</td>
+                        <td>{{ trash.user_id }}</td>
+                        <td>{{ trash.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+</div>
+
+<hr>
+<script>
+    var selectedItems = [];
+
+    function addMore() {
+        var trashType = document.getElementById('trash_type').value;
+        var quantity = document.getElementById('trash_quan').value;
+        var weight = document.getElementById('weight').value;
+
+        if (trashType && quantity && weight) {
+            selectedItems.push({ trashType: trashType, quantity: quantity, weight: weight });
+            console.log('Added item:', { trashType: trashType, quantity: quantity, weight: weight });
+        }
+        updateItemsDisplay();
+    }
+
+    function cancelPrevious() {
+        selectedItems.pop();
+        console.log('Cancelled previous item.');
+        updateItemsDisplay();
+    }
+
+    function updateItemsDisplay() {
+        var itemsDisplay = document.querySelector('.items-display');
+        itemsDisplay.innerHTML = '';
+        if (selectedItems.length > 0) {
+            itemsDisplay.style.display = 'block'; // Show the container box
+            selectedItems.forEach(function (item, index) {
+                var itemElement = document.createElement('p');
+                itemElement.textContent = 'Item ' + (index + 1) + ': ' + item.trashType + ', ' + item.quantity + ', ' + item.weight + ' kg';
+                itemsDisplay.appendChild(itemElement);
+            });
+        } else {
+            itemsDisplay.style.display = 'none'; // Hide the container box
+        }
+    }
+
+    function broadcastMessage(message) {
+        var broadcastSection = document.querySelector('.broadcast-section');
+        var messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        broadcastSection.appendChild(messageElement);
+    }
+</script>
+
+{% endblock %}

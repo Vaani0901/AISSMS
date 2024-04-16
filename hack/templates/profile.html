@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block body %}
+<link rel="stylesheet" href="/static/userProf.css" />
+<link rel="stylesheet" href="/static/footer.css">
+
+
+<br>
+<br><br><br><br>
+<div class="container">
+  <h1 class="title">User Profile</h1>
+  <hr />
+  <form action="/profile" method="POST" id="profileForm">
+    
+    {% for user in user %}
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">User ID</label>
+      <input type="text" name="username" class="form-control" placeholder="Enter your name here" id="exampleInputEmail1" aria-describedby="emailHelp" value={{user.userid}}>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" name="username" class="form-control" placeholder="Enter your name here" id="exampleInputEmail1" aria-describedby="emailHelp" value={{user.name}}>
+    </div>
+  
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" value={{user.email}} placeholder="Enter your email here" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Password</label>
+      <input type="password" value={{user.value}} name="password" class="form-control" placeholder="Enter your password here" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Address</label>
+      <input type="text" name="address" class="form-control" placeholder="Enter your address here" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ user.address }}">
+    </div>
+    
+      
+    {% endfor %}
+      
+    <button type="button" class="btn btn-outline-success">Edit</button>
+  </form>
+</div>
+
+{% endblock %}
